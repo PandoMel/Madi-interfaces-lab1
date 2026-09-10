@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню столовой</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; }
+        section { margin-bottom: 30px; }
+        input, select, button { padding: 8px; margin: 4px; }
+        li { margin: 6px 0; }
+        .day { border: 1px solid #ccc; padding: 10px; margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <h1>Сервис формирования меню столовой</h1>
+
+    <section>
+        <h2>Общий список блюд</h2>
+        <input id="dishName" placeholder="Название блюда">
+        <input id="dishCategory" placeholder="Категория">
+        <button onclick="addDish()">Добавить</button>
+        <ul id="dishList"></ul>
+    </section>
+
+    <section>
+        <h2>Сформировать меню на день</h2>
+        <input id="menuDate" type="date">
+        <select id="dishSelect"></select>
+        <button onclick="addDishToMenu()">Добавить в меню</button>
+    </section>
+
+    <section>
+        <h2>Меню на ближайшие 31 день</h2>
+        <div id="menuList"></div>
+    </section>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
